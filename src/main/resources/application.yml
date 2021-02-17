@@ -1,0 +1,5 @@
+server:
+  port: 8081
+spring:
+  aop:
+    auto: true #默认开启AOP
