@@ -1,4 +1,4 @@
-package com.xiufengd.simpleproject.sys.controller;
+package com.xiufengd.sys.controller;
 
 /**
  * @author xiufengd

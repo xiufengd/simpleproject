@@ -1,4 +1,4 @@
-package com.xiufengd.simpleproject.common.task;
+package com.xiufengd.common.task;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

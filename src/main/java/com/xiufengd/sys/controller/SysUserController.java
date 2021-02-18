@@ -1,8 +1,8 @@
-package com.xiufengd.simpleproject.sys.controller;
+package com.xiufengd.sys.controller;
 
-import com.xiufengd.simpleproject.common.annotation.OperationLogDetail;
-import com.xiufengd.simpleproject.common.annotation.OperationType;
-import com.xiufengd.simpleproject.common.annotation.OperationUnit;
+import com.xiufengd.common.annotation.OperationLogDetail;
+import com.xiufengd.common.annotation.OperationType;
+import com.xiufengd.common.annotation.OperationUnit;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

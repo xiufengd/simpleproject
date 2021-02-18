@@ -1,4 +1,4 @@
-package com.xiufengd.simpleproject.aoplogs;
+package com.xiufengd.aoplogs;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
