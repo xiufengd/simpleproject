@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 @Aspect
 public class ClassAsect {
 
-    @Before("execution(* com.xiufengd.simpleproject.sys.controller.*.* (..))")
+    @Before("execution(* com.xiufengd.sys.controller.*.* (..))")
     public void before(JoinPoint point){
         MethodSignature signature = (MethodSignature) point.getSignature();
         Method method = signature.getMethod();
