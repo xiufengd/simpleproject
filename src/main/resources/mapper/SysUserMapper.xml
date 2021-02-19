@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiufengd.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.xiufengd.domain.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id_" jdbcType="VARCHAR" property="id" />
+    <result column="company_id" jdbcType="VARCHAR" property="companyId" />
+    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="user_source_type" jdbcType="VARCHAR" property="userSourceType" />
+    <result column="account_" jdbcType="VARCHAR" property="account" />
+    <result column="password_" jdbcType="VARCHAR" property="password" />
+    <result column="phone_" jdbcType="VARCHAR" property="phone" />
+    <result column="email_" jdbcType="VARCHAR" property="email" />
+    <result column="sex_" jdbcType="INTEGER" property="sex" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="avatar_" jdbcType="VARCHAR" property="avatar" />
+    <result column="OFFICE_PHONE" jdbcType="VARCHAR" property="officePhone" />
+    <result column="user_type" jdbcType="INTEGER" property="userType" />
+    <result column="dept_id" jdbcType="VARCHAR" property="deptId" />
+    <result column="title_" jdbcType="VARCHAR" property="title" />
+    <result column="PROVINCE" jdbcType="VARCHAR" property="province" />
+    <result column="CITY" jdbcType="VARCHAR" property="city" />
+    <result column="DISTRICT" jdbcType="VARCHAR" property="district" />
+    <result column="address_" jdbcType="VARCHAR" property="address" />
+    <result column="remark_" jdbcType="VARCHAR" property="remark" />
+    <result column="locked_" jdbcType="BIT" property="locked" />
+    <result column="enable_" jdbcType="BIT" property="enable" />
+    <result column="APPROVAL_BY" jdbcType="VARCHAR" property="approvalBy" />
+    <result column="APPROVAL_TIME" jdbcType="TIMESTAMP" property="approvalTime" />
+    <result column="IS_APPROVAL" jdbcType="VARCHAR" property="isApproval" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="referrer" jdbcType="VARCHAR" property="referrer" />
+  </resultMap>
+</mapper>

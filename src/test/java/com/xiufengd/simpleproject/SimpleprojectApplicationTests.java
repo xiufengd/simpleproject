@@ -3,10 +3,10 @@ package com.xiufengd.simpleproject;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class SimpleprojectApplicationTests {
 
-    @Test
+//    @Test
     void contextLoads() {
     }
 
