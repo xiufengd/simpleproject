@@ -10,6 +10,6 @@ public class InitProject implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("1111111111111111111111111111111");
+        System.out.println("-----------项目启动完成----------------");
     }
 }

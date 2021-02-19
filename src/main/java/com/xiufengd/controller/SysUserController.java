@@ -8,9 +8,10 @@ import com.xiufengd.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("user")
+@RestController
 @RequestMapping("user")
 public class SysUserController {
 
@@ -29,7 +30,7 @@ public class SysUserController {
     }
 
     @GetMapping("getUser")
-    public SysUser getUser(String id){
+    public @ResponseBody SysUser getUser(String id, String name){
         return userService.getUser(id);
     }
 }
