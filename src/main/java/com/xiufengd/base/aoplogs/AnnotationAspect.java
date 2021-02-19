@@ -1,7 +1,7 @@
-package com.xiufengd.aoplogs;
+package com.xiufengd.base.aoplogs;
 
 import com.alibaba.fastjson.JSON;
-import com.xiufengd.common.annotation.OperationLogDetail;
+import com.xiufengd.base.annotation.OperationLogDetail;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -15,7 +15,7 @@ import java.util.Map;
 @Aspect
 public class AnnotationAspect {
 
-    @Pointcut("@annotation(com.xiufengd.common.annotation.OperationLogDetail)")
+    @Pointcut("@annotation(com.xiufengd.base.annotation.OperationLogDetail)")
     public void annotationLog(){}
 
     @Around("annotationLog()")

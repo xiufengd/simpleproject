@@ -1,8 +1,8 @@
 package com.xiufengd.controller;
 
-import com.xiufengd.common.annotation.OperationLogDetail;
-import com.xiufengd.common.annotation.OperationType;
-import com.xiufengd.common.annotation.OperationUnit;
+import com.xiufengd.base.annotation.OperationLogDetail;
+import com.xiufengd.base.annotation.OperationType;
+import com.xiufengd.base.annotation.OperationUnit;
 import com.xiufengd.domain.SysUser;
 import com.xiufengd.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;

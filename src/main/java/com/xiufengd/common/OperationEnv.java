@@ -1,5 +1,13 @@
 package com.xiufengd.common;
-
+/**
+ *
+ * @Description:操作环境变量
+ * @Author:xiufengd
+ * @Date:  2021/2/19 22:50
+ * @Param: null
+ * @return: null
+ * @Throws
+ */
 public enum OperationEnv {
 	
 	H5("H5"),

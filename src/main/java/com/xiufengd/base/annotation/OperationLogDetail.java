@@ -1,4 +1,4 @@
-package com.xiufengd.common.annotation;
+package com.xiufengd.base.annotation;
 
 import java.lang.annotation.*;
 
