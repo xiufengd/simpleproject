@@ -1,5 +1,6 @@
 package com.xiufengd.domain;
 
+import com.xiufengd.utils.DateUtil;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
@@ -629,5 +630,72 @@ public class SysUser {
      */
     public void setReferrer(String referrer) {
         this.referrer = referrer;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"id\":")
+                .append(id == null ? null : '\"' + id + '\"');
+        sb.append(",\"companyId\":")
+                .append(companyId == null ? null : '\"' + companyId + '\"');
+        sb.append(",\"roleId\":")
+                .append(roleId == null ? null : '\"' + roleId + '\"');
+        sb.append(",\"userSourceType\":")
+                .append(userSourceType == null ? null : '\"' + userSourceType + '\"');
+        sb.append(",\"account\":")
+                .append(account == null ? null : '\"' + account + '\"');
+        sb.append(",\"password\":")
+                .append(password == null ? null : '\"' + password + '\"');
+        sb.append(",\"phone\":")
+                .append(phone == null ? null : '\"' + phone + '\"');
+        sb.append(",\"email\":")
+                .append(email == null ? null : '\"' + email + '\"');
+        sb.append(",\"sex\":")
+                .append(sex);
+        sb.append(",\"userName\":")
+                .append(userName == null ? null : '\"' + userName + '\"');
+        sb.append(",\"avatar\":")
+                .append(avatar == null ? null : '\"' + avatar + '\"');
+        sb.append(",\"officePhone\":")
+                .append(officePhone == null ? null : '\"' + officePhone + '\"');
+        sb.append(",\"userType\":")
+                .append(userType);
+        sb.append(",\"deptId\":")
+                .append(deptId == null ? null : '\"' + deptId + '\"');
+        sb.append(",\"title\":")
+                .append(title == null ? null : '\"' + title + '\"');
+        sb.append(",\"province\":")
+                .append(province == null ? null : '\"' + province + '\"');
+        sb.append(",\"city\":")
+                .append(city == null ? null : '\"' + city + '\"');
+        sb.append(",\"district\":")
+                .append(district == null ? null : '\"' + district + '\"');
+        sb.append(",\"address\":")
+                .append(address == null ? null : '\"' + address + '\"');
+        sb.append(",\"remark\":")
+                .append(remark == null ? null : '\"' + remark + '\"');
+        sb.append(",\"locked\":")
+                .append(locked);
+        sb.append(",\"enable\":")
+                .append(enable);
+        sb.append(",\"approvalBy\":")
+                .append(approvalBy == null ? null : '\"' + approvalBy + '\"');
+        sb.append(",\"approvalTime\":")
+                .append(approvalTime == null ? null : '\"' + DateUtil.getStringDate(approvalTime, "yyyy-MM-dd HH:mm:ss") + '\"');
+        sb.append(",\"isApproval\":")
+                .append(isApproval == null ? null : '\"' + isApproval + '\"');
+        sb.append(",\"createTime\":")
+                .append(createTime == null ? null : '\"' + DateUtil.getStringDate(createTime, "yyyy-MM-dd HH:mm:ss") + '\"');
+        sb.append(",\"createBy\":")
+                .append(createBy == null ? null : '\"' + createBy + '\"');
+        sb.append(",\"updateTime\":")
+                .append(updateTime == null ? null : '\"' + DateUtil.getStringDate(updateTime, "yyyy-MM-dd HH:mm:ss") + '\"');
+        sb.append(",\"updateBy\":")
+                .append(updateBy == null ? null : '\"' + updateBy + '\"');
+        sb.append(",\"referrer\":")
+                .append(referrer == null ? null : '\"' + referrer + '\"');
+        sb.append('}');
+        return sb.toString();
     }
 }
