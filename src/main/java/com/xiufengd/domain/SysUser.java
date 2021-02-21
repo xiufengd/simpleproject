@@ -11,6 +11,7 @@ import javax.persistence.*;
 @Table(name = "sys_user")
 @Repository
 public class SysUser {
+
     @Id
     @Column(name = "id_")
     @GeneratedValue(generator = "JDBC")
@@ -29,7 +30,7 @@ public class SysUser {
     private String roleId;
 
     /**
-     * 用户来源类别（1：银行；2：担保公司；3：保险公司；4：证券；5：基金；6：政府机构；7：企业；8：后台管理；9：信托；10：小贷；11：创投；12：其他）
+     * 用户来源类别
      */
     @Column(name = "user_source_type")
     private String userSourceType;
@@ -207,18 +208,18 @@ public class SysUser {
     }
 
     /**
-     * 获取用户来源类别（1：银行；2：担保公司；3：保险公司；4：证券；5：基金；6：政府机构；7：企业；8：后台管理；9：信托；10：小贷；11：创投；12：其他）
+     * 获取用户来源类别
      *
-     * @return user_source_type - 用户来源类别（1：银行；2：担保公司；3：保险公司；4：证券；5：基金；6：政府机构；7：企业；8：后台管理；9：信托；10：小贷；11：创投；12：其他）
+     * @return user_source_type - 用户来源类别
      */
     public String getUserSourceType() {
         return userSourceType;
     }
 
     /**
-     * 设置用户来源类别（1：银行；2：担保公司；3：保险公司；4：证券；5：基金；6：政府机构；7：企业；8：后台管理；9：信托；10：小贷；11：创投；12：其他）
+     * 设置用户来源类别
      *
-     * @param userSourceType 用户来源类别（1：银行；2：担保公司；3：保险公司；4：证券；5：基金；6：政府机构；7：企业；8：后台管理；9：信托；10：小贷；11：创投；12：其他）
+     * @param userSourceType 用户来源类别
      */
     public void setUserSourceType(String userSourceType) {
         this.userSourceType = userSourceType;
@@ -690,20 +691,21 @@ public class SysUser {
         sb.append(",\"approvalBy\":")
                 .append(approvalBy == null ? null : '\"' + approvalBy + '\"');
         sb.append(",\"approvalTime\":")
-                .append(approvalTime == null ? null : approvalTime);
+                .append(approvalTime == null ? null : '\"' + DateUtil.getStringDate(approvalTime, "yyyy-MM-dd HH:mm:ss") + '\"');
         sb.append(",\"isApproval\":")
                 .append(isApproval == null ? null : '\"' + isApproval + '\"');
         sb.append(",\"createTime\":")
-                .append(createTime == null ? null : createTime);
+                .append(createTime == null ? null : '\"' + DateUtil.getStringDate(createTime, "yyyy-MM-dd HH:mm:ss") + '\"');
         sb.append(",\"createBy\":")
                 .append(createBy == null ? null : '\"' + createBy + '\"');
         sb.append(",\"updateTime\":")
-                .append(updateTime == null ? null : updateTime);
+                .append(updateTime == null ? null : '\"' + DateUtil.getStringDate(updateTime, "yyyy-MM-dd HH:mm:ss") + '\"');
         sb.append(",\"updateBy\":")
                 .append(updateBy == null ? null : '\"' + updateBy + '\"');
         sb.append(",\"referrer\":")
                 .append(referrer == null ? null : '\"' + referrer + '\"');
         sb.append('}');
         return sb.toString();
+
     }
 }

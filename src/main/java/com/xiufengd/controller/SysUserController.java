@@ -44,10 +44,13 @@ public class SysUserController {
     }
 
     @GetMapping("getUser")
-    public @ResponseBody SysUser getUser(String id, String name){
+    public @ResponseBody Object getUser(String id, String name){
+//            return userService.getUser(id).toString();
 //        if(redisUtil.get("user4")==null){
             SysUser user = userService.getUser(id);
-            System.out.println(user.getCreateTime()+"-----"+DateUtil.getStringDate(user.getCreateTime(),"yyyy-MM-dd HH:mm:ss"));
+            System.out.println("base:"+user);
+            System.out.println("toString:"+user.toString());
+//            System.out.println(user.getCreateTime()+"-----"+DateUtil.getStringDate(user.getCreateTime(),"yyyy-MM-dd HH:mm:ss"));
             redisUtil.set("user4", user.toString());
 //        }
         System.out.println(redisUtil.get("user4").toString());
