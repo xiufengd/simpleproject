@@ -54,7 +54,4 @@ public class SysUserController {
         return JSONObject.parseObject(redisUtil.get("user4").toString(),SysUser.class);
     }
 
-    public static void main(String[] args) {
-        System.out.println(DateUtil.getStringDate(DateUtil.getDateFromString("2020-09-10 17:11:37","yyyy-MM-dd HH:mm:ss"),"yyyy-MM-dd HH:mm:ss"));
-    }
 }

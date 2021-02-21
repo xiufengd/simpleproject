@@ -1,6 +1,8 @@
 package com.xiufengd.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.xiufengd.utils.DateUtil;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
@@ -123,6 +125,8 @@ public class SysUser {
      * 审核时间
      */
     @Column(name = "APPROVAL_TIME")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date approvalTime;
 
     /**
@@ -132,12 +136,16 @@ public class SysUser {
     private String isApproval;
 
     @Column(name = "create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     @Column(name = "create_by")
     private String createBy;
 
     @Column(name = "update_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 
     @Column(name = "update_by")
@@ -682,15 +690,15 @@ public class SysUser {
         sb.append(",\"approvalBy\":")
                 .append(approvalBy == null ? null : '\"' + approvalBy + '\"');
         sb.append(",\"approvalTime\":")
-                .append(approvalTime == null ? null : '\"' + DateUtil.getStringDate(approvalTime, "yyyy-MM-dd HH:mm:ss") + '\"');
+                .append(approvalTime == null ? null : approvalTime);
         sb.append(",\"isApproval\":")
                 .append(isApproval == null ? null : '\"' + isApproval + '\"');
         sb.append(",\"createTime\":")
-                .append(createTime == null ? null : '\"' + DateUtil.getStringDate(createTime, "yyyy-MM-dd HH:mm:ss") + '\"');
+                .append(createTime == null ? null : createTime);
         sb.append(",\"createBy\":")
                 .append(createBy == null ? null : '\"' + createBy + '\"');
         sb.append(",\"updateTime\":")
-                .append(updateTime == null ? null : '\"' + DateUtil.getStringDate(updateTime, "yyyy-MM-dd HH:mm:ss") + '\"');
+                .append(updateTime == null ? null : updateTime);
         sb.append(",\"updateBy\":")
                 .append(updateBy == null ? null : '\"' + updateBy + '\"');
         sb.append(",\"referrer\":")
