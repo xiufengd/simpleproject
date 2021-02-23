@@ -1,4 +1,4 @@
-package com.xiufengd.controller;
+package com.xiufengd.controller.base;
 
 /**
  * @author xiufengd
